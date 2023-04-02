@@ -7,6 +7,7 @@ import plotly.express as px
 import plotly.graph_objs as go
 from collections import Counter
 import pickle
+import base64
 from PIL import Image
 from sklearn.preprocessing import LabelEncoder
 
@@ -16,12 +17,23 @@ datafile = 'movies.csv'
 
 image_folder = 'images'
 
-
 def load_image(imagefile):
     img = Image.open(imagefile)
     return img
 
 def main():
+    page_bg_img = f"""
+    <style>
+    [data-testid="stAppViewContainer"] {{
+    background-image: url("https://images.unsplash.com/photo-1501426026826-31c667bdf23d");
+    background-size: cover;
+    }}
+    [data-testid="stHeader"] {{
+    background: rgba(0,0,0,0);
+    }}
+    </style>
+    """
+    st.markdown(page_bg_img, unsafe_allow_html=True)
     st.title('Hệ thống gợi ý phim :film_frames:')
     st.write('Chào mừng bạn đến với hệ thống gợi ý phim, tôi tạo ra cái này để giúp mọi người có thể tìm ra phim muốn xem dựa vào vài đặc điểm')
     st.write('Website này sử dụng một mô hình Machine learning đã được huấn luyện trên movies dataset từ movieslen')
