@@ -6,4 +6,4 @@ Install lastest version of these package and you're good to go:
 - Seaborn
 - Plotly
 - Streamlit
-- Pupyter Notebook(Optional, you can install this to read the model)
+- Jupyter Notebook(Optional, you can install this to read the model)
