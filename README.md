@@ -1,2 +1,9 @@
 # Movie-Recommendation-System
-Install requirements.txt first and you are good to go
+Install lastest version of these package and you're good to go:
+- Pandas
+- Scikit-Learn
+- Matplotlib
+- Seaborn
+- Plotly
+- Streamlit
+- Pupyter Notebook(Optional, you can install this to read the model)
